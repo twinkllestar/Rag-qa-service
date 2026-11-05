@@ -1,13 +1,13 @@
-# Request / response 的数据格式。FastAPI 用它们做 validation 和生成 /docs
-# BaseModel is used for data validation and serialization in FastAPI.
-# It allows you to define the structure of your request and response data,
-# ensuring that the data adheres to the specified format and constraints. 
-# The Field class is used to provide additional metadata and validation rules for individual fields in the model.
-from pydantic import BaseModel, Field
+# Request / Response schemas for FastAPI endpoints
+# FastAPI use them for validation and produce /docs
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class AskRequest(BaseModel):
-    # min_length / max_length are basic input validation
+    # str_strip_whitespace: ruduce whitespaces, then check length
+    #  "   " --> "" 
+    model_config = ConfigDict(str_strip_whitespace=True)
+
     question: str = Field(min_length=1, max_length=1000)
 
 
