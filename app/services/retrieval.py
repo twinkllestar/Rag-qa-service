@@ -31,7 +31,7 @@ class AzureSearchRetriever:
         search_client: SearchClient,
         openai_client: OpenAI,
         embedding_deployment: str,
-        top_k: int = 3,
+        top_k: int = 5, #llm can see 5 chunks, but tokens will be more used
     ) -> None:
         # 两个 client 都从外面传进来 (dependency injection),方便 test 时换成 fake
         self._search = search_client

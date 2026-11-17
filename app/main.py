@@ -33,7 +33,7 @@ async def log_requests(request: Request, call_next):
         response.status_code,
         duration_ms,
     )
-    response.headers["X-Request-ID"] = request_id  # 方便客户端报 bug 时带上这个 id
+    response.headers["X-Request-ID"] = request_id  # 方便client side报 bug 时带上这个 id
     return response
 
 

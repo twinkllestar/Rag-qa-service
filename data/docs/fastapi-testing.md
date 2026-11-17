@@ -1,180 +1,3 @@
-Testing
-
-
-
-FastAPIFastAPI
- fastapi/fastapi
-FastAPI
-Features
-Learn
-Python Types Intro
-Concurrency and async / await
-Tutorial - User Guide
-First Steps
-Path Parameters
-Query Parameters
-Request Body
-Query Parameters and String Validations
-Path Parameters and Numeric Validations
-Query Parameter Models
-Body - Multiple Parameters
-Body - Fields
-Body - Nested Models
-Declare Request Example Data
-Extra Data Types
-Cookie Parameters
-Header Parameters
-Cookie Parameter Models
-Header Parameter Models
-Response Model - Return Type
-Extra Models
-Response Status Code
-Form Data
-Form Models
-Request Files
-Request Forms and Files
-Handling Errors
-Path Operation Configuration
-JSON Compatible Encoder
-Body - Updates
-Dependencies
-Classes as Dependencies
-Sub-dependencies
-Dependencies in path operation decorators
-Global Dependencies
-Dependencies with yield
-Security
-Security - First Steps
-Get Current User
-Simple OAuth2 with Password and Bearer
-OAuth2 with Password (and hashing), Bearer with JWT tokens
-Middleware
-CORS (Cross-Origin Resource Sharing)
-SQL (Relational) Databases
-Bigger Applications - Multiple Files
-Stream JSON Lines
-Server-Sent Events (SSE)
-Background Tasks
-Metadata and Docs URLs
-Frontend
-Static Files
-Testing
-On this page
-Using TestClient
-Separating tests
-FastAPI app file
-Testing file
-Testing: extended example
-Extended FastAPI app file
-Extended testing file
-Run it
-Debugging
-Advanced User Guide
-Stream Data
-Path Operation Advanced Configuration
-Additional Status Codes
-Return a Response Directly
-Custom Response - HTML, Stream, File, others
-Additional Responses in OpenAPI
-Response Cookies
-Response Headers
-Response - Change Status Code
-Advanced Dependencies
-Advanced Security
-OAuth2 scopes
-HTTP Basic Auth
-Using the Request Directly
-Using Dataclasses
-Advanced Middleware
-Sub Applications - Mounts
-Behind a Proxy
-Templates
-WebSockets
-Lifespan Events
-OpenTelemetry
-Testing WebSockets
-Testing Events: lifespan and startup - shutdown
-Testing Dependencies with Overrides
-Async Tests
-Settings and Environment Variables
-OpenAPI Callbacks
-OpenAPI Webhooks
-Including WSGI - Flask, Django, others
-Generating SDKs
-Advanced Python Types
-JSON with Bytes as Base64
-Strict Content-Type Checking
-FastAPI CLI
-Editor Support
-Deployment
-About FastAPI versions
-FastAPI Cloud
-About HTTPS
-Run a Server Manually
-Deployments Concepts
-Deploy FastAPI on Cloud Providers
-Server Workers - Uvicorn with Workers
-FastAPI in Containers - Docker
-How To - Recipes
-General - How To - Recipes
-Migrate from Pydantic v1 to Pydantic v2
-GraphQL
-Custom Request and APIRoute class
-Conditional OpenAPI
-Extending OpenAPI
-Separate OpenAPI Schemas for Input and Output or Not
-Custom Docs UI Static Assets (Self-Hosting)
-Configure Swagger UI
-Testing a Database
-Use Old 403 Authentication Error Status Codes
-Reference
-FastAPI class
-Request Parameters
-Status Codes
-UploadFile class
-Exceptions - HTTPException and WebSocketException
-Dependencies - Depends() and Security()
-APIRouter class
-Background Tasks - BackgroundTasks
-Request class
-WebSockets
-HTTPConnection class
-Response class
-Custom Response Classes - File, HTML, Redirect, Streaming, etc.
-Server-Sent Events - EventSourceResponse and ServerSentEvent
-Middleware
-OpenAPI
-OpenAPI docs
-OpenAPI models
-Security Tools
-Encoders - jsonable_encoder
-Static Files - StaticFiles
-Templating - Jinja2Templates
-Test Client - TestClient
-Resources
-FastAPI People
-Help
-Contributing
-Translations
-Full Stack FastAPI Template
-External Links
-FastAPI and friends newsletter
-About
-Alternatives, Inspiration and Comparisons
-History, Design and Future
-Benchmarks
-Repository Management
-Release Notes
-FastAPI 
-Learn 
-Tutorial - User Guide 
-Testing¶
-Thanks to Starlette, testing FastAPI applications is easy and enjoyable.
-
-It is based on HTTPX, which in turn is designed based on Requests, so it's very familiar and intuitive.
-
-With it, you can use pytest directly with FastAPI.
-
 Using TestClient¶
 Note
 
@@ -450,32 +273,29 @@ After that, you just need to install pytest.
 Add it to your project:
 
 
+uv add pytest
 
+████████████████████████████████████████ 100%
 
+restart ↻
 It will detect the files and tests automatically, execute them, and report the results back to you.
 
 Run the tests with:
 
 
+uv run pytest
 
+================ test session starts ================
+platform linux -- Python 3.6.9, pytest-5.3.5, py-1.8.1, pluggy-0.13.1
+rootdir: /home/user/code/superawesome-cli/app
+plugins: forked-1.1.3, xdist-1.31.0, cov-2.8.1
+collected 6 items
 
+████████████████████████████████████████ 100%
 
+test_main.py ......                            [100%]
 
+================= 1 passed in 0.03s =================
 
-
-
-
-
-
-
-
+restart ↻
  Back to top
-Next
-Debugging
-The FastAPI trademark is owned by @tiangolo and is registered in the US and across other regions
-Made with Zensical
-
-Search
-
-Filters
-Tags
