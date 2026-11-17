@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     # fake / azure:用哪种实现。test 和 CI 默认用 fake,不花钱
     llm_backend: str = "fake"
     retriever_backend: str = "fake"
+        # key / identity:云端用 identity (没有任何 key),本地用 key
+    auth_mode: str = "key"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
