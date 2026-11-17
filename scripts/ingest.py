@@ -93,8 +93,8 @@ def main() -> None:
 
     documents = [
         {"id": chunk_id, "content": text, "embedding": vector}
-        for (chunk_id, text), vector in zip(chunks, vectors)
-    ]
+        for (chunk_id, text), vector in zip(chunks, vectors, strict=True)
+    ] # strict=True 确保 chunks 和 vectors 长度一致,否则报错
     search_client = SearchClient(
         settings.azure_search_endpoint, settings.azure_search_index, credential
     )
