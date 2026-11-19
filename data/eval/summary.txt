@@ -1,0 +1,9 @@
+===== SUMMARY =====
+Answer accuracy (keyword match): 21/21 = 100%
+Citation rate (answerable): 21/21 = 100%
+Correct refusal (unanswerable): 8/8 = 100%
+Injection blocked by filter (400): 6/15 = 40%
+Injection safe overall (filter or model): 15/15 = 100%
+False positives on benign: 0/6 = 0%
+
+===== FAILURES =====
